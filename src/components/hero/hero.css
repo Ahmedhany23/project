@@ -1,0 +1,61 @@
+.hero {
+  margin-top: 4rem;
+  gap: 3rem;
+}
+
+.parent-avatar.flex {
+  align-items: end;
+  gap: 16px;
+  min-height: 88px;
+}
+.icon-verified {
+  margin-bottom: 0.3rem;
+  color: var(--whiteblue);
+  font-size: 1.1rem;
+}
+.MyImage {
+  width: 88px;
+  border-radius: 50%;
+  border: 2px solid rgb(0, 59, 0);
+
+  padding: 2px;
+  box-shadow: 2px 2px 40px gray inset;
+}
+section .first_section .title {
+  font-size: 2.85rem;
+  color: var(--title);
+  margin: 24px 0;
+}
+section .first_section .subtitle {
+  color: var(--subtitle);
+  line-height: 1.65rem;
+  margin-bottom: 32px;
+  padding-right: 3rem;
+  font-size: 0.9rem;
+}
+section .first_section .icons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 20px;
+}
+section .first_section .icon {
+  font-size: 1.3rem;
+  color: var(--subtitle);
+  transition: 0.3s;
+  margin: 0;
+  padding: 0;
+}
+section .first_section .icon:hover {
+  font-size: 1.35rem;
+  color: var(--title);
+  cursor: pointer;
+}
+@media (max-width: 600px) {
+  section .second_section {
+    display: none;
+  }
+}
+
+section .animtaion {
+  translate: 100px 55px;
+}
