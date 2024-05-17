@@ -3,11 +3,19 @@ import "./main.css";
 import { AnimatePresence, motion } from "framer-motion";
 const myProjects = [
   {
-    ProjectName: "HTML&CSS project",
+    ProjectName: "RebelRover",
+    category: "react",
+    imgPath: "/Landing6.JPG",
+    WURL: "https://rebelrover.netlify.app/",
+    GURL: "https://github.com/Ahmedhany23/rebel",
+    text:" Responsive Design with Tailwindcss and Using Framer Motion"
+  },
+  {
+    ProjectName: "Leon",
     category: "css",
     imgPath: "/Landing.JPG",
-    WURL: "https://ahmedhany23.github.io/Template-1/",
-    GURL: "https://github.com/Ahmedhany23/Template-1",
+    WURL: "https://websiteleon1.netlify.app",
+    GURL: "https://github.com/Ahmedhany23/Leon",
     text: "Responsive Design with Flexbox for Seamless User Experience",
   },
   {
@@ -40,7 +48,7 @@ const myProjects = [
     imgPath: "/Landing5.JPG",
     WURL: "https://shoppingreact-c5d94.web.app/",
     GURL: "https://github.com/Ahmedhany23/ShoppingReact",
-    text:" Our solution combines the robust capabilities of Node.js and Express.js with the versatility of React.js to seamlessly fetch API data for product integration. "
+    text:" Leveraging the power of React.js, we seamlessly integrate product information through an API built with the robust duo of Node.js and Express.js. "
   },
   {
     ProjectName: "SocialReact",
