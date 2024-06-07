@@ -22,13 +22,16 @@ const Header = () => {
         <li>
           <a href="">About</a>
         </li>
-        
+
         <li>
           <a href="#project">Projects</a>
         </li>
-         <li>
+        <li>
           <a href="#contact">Contact us</a>
         </li>
+        <li>
+              <a href="/AhmedHanyCv.pdf">Cv</a>
+            </li>
       </ul>
 
       <button
@@ -40,11 +43,13 @@ const Header = () => {
           );
 
           settheme(localStorage.getItem("currentMode"));
-          setSM(SM===false? true : false)
+          setSM(SM === false ? true : false);
         }}
       >
         {SM ? (
-          <span className="icon-sun" style={{color:"orange"}}> </span>
+          <span className="icon-sun" style={{ color: "orange" }}>
+            {" "}
+          </span>
         ) : (
           <span className="icon-moon-o"> </span>
         )}
@@ -63,17 +68,15 @@ const Header = () => {
             <li>
               <a href="">About</a>
             </li>
+
             <li>
-              <a href="">Articles</a>
+              <a href="#project">Projects</a>
             </li>
             <li>
-              <a href="">Projects</a>
+              <a href="#contact">Contact us</a>
             </li>
             <li>
-              <a href="">Speaking</a>
-            </li>
-            <li>
-              <a href="">Uses</a>
+              <a href="/AhmedHanyCv.pdf">Cv</a>
             </li>
           </ul>
         </div>

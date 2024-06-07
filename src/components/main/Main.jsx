@@ -6,8 +6,16 @@ const myProjects = [
     ProjectName: "RebelRover",
     category: "react",
     imgPath: "/Landing6.JPG",
-    WURL: "https://rebelrover.netlify.app/",
+    WURL: "https://rebelrover.vercel.app/",
     GURL: "https://github.com/Ahmedhany23/rebel",
+    text:" Responsive Design with Tailwindcss and Using Framer Motion"
+  },
+  {
+    ProjectName: "JobStack",
+    category: "react",
+    imgPath: "/Landing8.PNG",
+    WURL: "https://jobstack-delta.vercel.app/",
+    GURL: "https://github.com/Ahmedhany23/jobstack",
     text:" Responsive Design with Tailwindcss and Using Framer Motion"
   },
   {
@@ -144,13 +152,6 @@ const Main = () => {
                       </div>
                     </div>
 
-                    <a href="" className="link flex ">
-                      more{" "}
-                      <span
-                        style={{ alignSelf: "end" }}
-                        className="icon-arrow-right"
-                      />
-                    </a>
                   </div>
                 </div>
               </motion.article>
