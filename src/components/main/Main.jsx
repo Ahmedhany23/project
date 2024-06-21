@@ -3,12 +3,20 @@ import "./main.css";
 import { AnimatePresence, motion } from "framer-motion";
 const myProjects = [
   {
+    ProjectName: "Moviepick",
+    category: "react",
+    imgPath: "/Landing9.JPG",
+    WURL: "https://moviepick-black.vercel.app/",
+    GURL: "https://github.com/Ahmedhany23/movies",
+    text: " Moviepick is a web application focused on movies, designed to help users discover and explore films.",
+  },
+  {
     ProjectName: "RebelRover",
     category: "react",
     imgPath: "/Landing6.JPG",
     WURL: "https://rebelrover.vercel.app/",
     GURL: "https://github.com/Ahmedhany23/rebel",
-    text:" Responsive Design with Tailwindcss and Using Framer Motion"
+    text: " Responsive Design with Tailwindcss and Using Framer Motion",
   },
   {
     ProjectName: "JobStack",
@@ -16,7 +24,7 @@ const myProjects = [
     imgPath: "/Landing8.PNG",
     WURL: "https://jobstack-delta.vercel.app/",
     GURL: "https://github.com/Ahmedhany23/jobstack",
-    text:" Responsive Design with Tailwindcss and Using Framer Motion"
+    text: " Responsive Design with Tailwindcss and Using Framer Motion",
   },
   {
     ProjectName: "Leon",
@@ -32,7 +40,7 @@ const myProjects = [
     imgPath: "/Landing1.JPG",
     WURL: "https://ahmedhany23.github.io/Template-3/",
     GURL: "https://github.com/Ahmedhany23/Template-3",
-    text:"Elevating User Experience with Grid Technology: Design Excellence and Responsive Web Development",
+    text: "Elevating User Experience with Grid Technology: Design Excellence and Responsive Web Development",
   },
   {
     ProjectName: "JS project",
@@ -40,7 +48,7 @@ const myProjects = [
     imgPath: "/Landing2.JPG",
     WURL: "https://ahmedhany23.github.io/Template-2/",
     GURL: "https://github.com/Ahmedhany23/Template-2",
-    text:" Leveraging Flexbox and JavaScript for Enhanced User Engagement"
+    text: " Leveraging Flexbox and JavaScript for Enhanced User Engagement",
   },
   {
     ProjectName: "TasksToDo",
@@ -48,7 +56,7 @@ const myProjects = [
     imgPath: "/Landing3.JPG",
     WURL: "https://taskstodo-a22a6.web.app/",
     GURL: "https://github.com/Ahmedhany23/TasksToDo",
-    text:" Developed features for task assignment, progress tracking, and status updates",
+    text: " Developed features for task assignment, progress tracking, and status updates",
   },
   {
     ProjectName: "ShoppingCartReact",
@@ -56,7 +64,7 @@ const myProjects = [
     imgPath: "/Landing5.JPG",
     WURL: "https://shoppingreact-c5d94.web.app/",
     GURL: "https://github.com/Ahmedhany23/ShoppingReact",
-    text:" Leveraging the power of React.js, we seamlessly integrate product information through an API built with the robust duo of Node.js and Express.js. "
+    text: " Leveraging the power of React.js, we seamlessly integrate product information through an API built with the robust duo of Node.js and Express.js. ",
   },
   {
     ProjectName: "SocialReact",
@@ -64,7 +72,7 @@ const myProjects = [
     imgPath: "/Landing4.JPG",
     WURL: "https://socialreact-5807f.web.app/",
     GURL: "https://github.com/Ahmedhany23/SocialReact",
-    text:" Leveraging Material-UI for Rapid Responsiveness and Dynamic Theme Switching"
+    text: " Leveraging Material-UI for Rapid Responsiveness and Dynamic Theme Switching",
   },
 ];
 const Main = () => {
@@ -139,9 +147,7 @@ const Main = () => {
                 />
                 <div className="box ">
                   <h1 className="title">{params.ProjectName}</h1>
-                  <p className="sub-title">
-                    {params.text}
-                  </p>
+                  <p className="sub-title">{params.text}</p>
                   <div className="flex icons">
                     <div className="flex icon">
                       <div>
@@ -151,7 +157,6 @@ const Main = () => {
                         <a className="icon-github" href={params.GURL}></a>
                       </div>
                     </div>
-
                   </div>
                 </div>
               </motion.article>
