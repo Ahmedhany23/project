@@ -28,17 +28,13 @@ const Hero = () => {
           Front-End Developer
         </motion.h1>
         <p className="subtitle">
-          Hi there! I'm Ahmed, a front-end developer with a passion for crafting
-          clean code and user-centric experiences. I love working
-          collaboratively to solve problems and build beautiful, responsive
-          websites across all devices. My expertise lies in leveraging React.js
-          and Next.js to create pixel-perfect interfaces. Whether it's a massive
-          responsive build, stunning hover effects, or even RTL Arabic sites,
-          I've got the experience to tackle it. My tech stack is strong, with
-          JavaScript, React.js & Next.js at the core, backed by powerful UI
-          libraries like MUI, Tailwind, and Styled-components, all working
-          seamlessly with the foundation of HTML & CSS. Looking forward to
-          connecting!
+          Hi there! I'm Ahmed, a front-end developer passionate about clean code
+          and user-centric experiences. I excel at leveraging React.js and
+          Next.js to craft pixel-perfect interfaces and responsive websites,
+          including stunning hover effects and RTL Arabic sites. My tech stack
+          features JavaScript, React.js, Next.js, and robust UI libraries like
+          MUI, Tailwind, and Styled-components, all built on the solid
+          foundation of HTML and CSS. Looking forward to connecting!
         </p>
         <div className="icons">
           <div>

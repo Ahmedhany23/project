@@ -5,10 +5,18 @@ const myProjects = [
   {
     ProjectName: "Moviepick",
     category: "react",
-    imgPath: "/Landing9.JPG",
+    imgPath: "/Landing9.jpg",
     WURL: "https://moviepick-black.vercel.app/",
     GURL: "https://github.com/Ahmedhany23/movies",
     text: " Moviepick is a web application focused on movies, designed to help users discover and explore films.",
+  },
+  {
+    ProjectName: "Eccomerce-React",
+    category: "react",
+    imgPath: "/Landing4.png",
+    WURL: "https://ecommerce-reactapp-eta.vercel.app/",
+    GURL: "https://github.com/Ahmedhany23/ecommerce-reactapp",
+    text: "An E-commerce platform to browse, search, and purchase products seamlessly.",
   },
   {
     ProjectName: "RebelRover",
@@ -27,52 +35,28 @@ const myProjects = [
     text: " Responsive Design with Tailwindcss and Using Framer Motion",
   },
   {
-    ProjectName: "Leon",
-    category: "css",
-    imgPath: "/Landing.JPG",
-    WURL: "https://websiteleon1.netlify.app",
-    GURL: "https://github.com/Ahmedhany23/Leon",
-    text: "Responsive Design with Flexbox for Seamless User Experience",
+    ProjectName: "VivaDecor",
+    category: ["css", "js"],
+    imgPath: "/Landing2.png",
+    WURL: "https://vivadecor-three.vercel.app/",
+    GURL: "https://github.com/Ahmedhany23/WebmasterTask2/tree/main/task1",
+    text: " Responsive Design with Tailwindcss and Using JavaScript",
   },
   {
-    ProjectName: "HTML&CSS project",
-    category: "css",
-    imgPath: "/Landing1.JPG",
-    WURL: "https://ahmedhany23.github.io/Template-3/",
-    GURL: "https://github.com/Ahmedhany23/Template-3",
-    text: "Elevating User Experience with Grid Technology: Design Excellence and Responsive Web Development",
+    ProjectName: "Solar",
+    category: ["css"],
+    imgPath: "/Landing.png",
+    WURL: "https://solar-web-master.vercel.app/",
+    GURL: "https://github.com/Ahmedhany23/WebmasterTasks/tree/main/task1",
+    text: " Responsive Design with Html&CSS",
   },
   {
-    ProjectName: "JS project",
-    category: "js",
-    imgPath: "/Landing2.JPG",
-    WURL: "https://ahmedhany23.github.io/Template-2/",
-    GURL: "https://github.com/Ahmedhany23/Template-2",
-    text: " Leveraging Flexbox and JavaScript for Enhanced User Engagement",
-  },
-  {
-    ProjectName: "TasksToDo",
-    category: "react",
-    imgPath: "/Landing3.JPG",
-    WURL: "https://taskstodo-a22a6.web.app/",
-    GURL: "https://github.com/Ahmedhany23/TasksToDo",
-    text: " Developed features for task assignment, progress tracking, and status updates",
-  },
-  {
-    ProjectName: "ShoppingCartReact",
-    category: "react",
-    imgPath: "/Landing5.JPG",
-    WURL: "https://shoppingreact-c5d94.web.app/",
-    GURL: "https://github.com/Ahmedhany23/ShoppingReact",
-    text: " Leveraging the power of React.js, we seamlessly integrate product information through an API built with the robust duo of Node.js and Express.js. ",
-  },
-  {
-    ProjectName: "SocialReact",
-    category: "react",
-    imgPath: "/Landing4.JPG",
-    WURL: "https://socialreact-5807f.web.app/",
-    GURL: "https://github.com/Ahmedhany23/SocialReact",
-    text: " Leveraging Material-UI for Rapid Responsiveness and Dynamic Theme Switching",
+    ProjectName: "Ecommerce",
+    category: "next",
+    imgPath: "/Landing3.png",
+    WURL: "https://ecommerce-2025.vercel.app/",
+    GURL: "https://github.com/Ahmedhany23/ecommerce",
+    text: " This project is built using Node.js for the backend API and Firebase for authentication, providing a seamless shopping experience with features like product search, category filters, and user reviews.",
   },
 ];
 const Main = () => {
@@ -94,7 +78,7 @@ const Main = () => {
           onClick={() => {
             setActive("css");
             const newArr = myProjects.filter((item) => {
-              return item.category == "css";
+              return item.category[0] == "css";
             });
             setArr(newArr);
           }}
@@ -106,7 +90,7 @@ const Main = () => {
           onClick={() => {
             setActive("js");
             const newArr = myProjects.filter((item) => {
-              return item.category == "js";
+              return item.category[1] == "js";
             });
             setArr(newArr);
           }}
@@ -125,6 +109,18 @@ const Main = () => {
           className={Active === "react" ? "active" : null}
         >
           React
+        </button>
+        <button
+          onClick={() => {
+            setActive("next");
+            const newArr = myProjects.filter((item) => {
+              return item.category == "next";
+            });
+            setArr(newArr);
+          }}
+          className={Active === "next" ? "active" : null}
+        >
+          NextJs
         </button>
       </section>
       <section className="right-section  flex">
