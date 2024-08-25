@@ -92,6 +92,22 @@ section .first_section .tech .tech-skills li img {
   cursor: pointer;
 }
 
+section .first_section .cv-btn{
+  margin-top: 20px;
+  background-color: rgba(36, 37, 46, 1);
+  width: 11rem;
+  padding: 0.75rem 0;
+  text-align: center;
+  font-size: 1.05rem;
+  text-transform: capitalize;
+  opacity: 0.9;
+  border-radius: 0.4rem;
+  transition: 0.5s linear;
+  border: 1px solid var(--whiteblue);
+}
+section .first_section .cv-btn:hover{
+  opacity: 1;
+}
 @media (max-width: 900px) {
   .hero.flex {
     flex-direction: column-reverse;

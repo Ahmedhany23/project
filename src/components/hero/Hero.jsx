@@ -77,6 +77,7 @@ const Hero = () => {
             <motion.li whileHover={{y:-10}} transition={{duration:.2}}><img src="https://skillicons.dev/icons?i=tailwind,scss" alt="skill-icon" width={80} height={40}/></motion.li>
           </ul>
         </div>
+        <a className="cv-btn" href="/AhmedHanyCv.pdf">Download My CV</a>
       </div>
       <div className="second_section">
         <motion.img
