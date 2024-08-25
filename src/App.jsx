@@ -7,33 +7,44 @@ import Hero from "./components/hero/Hero";
 import Main from "./components/main/Main";
 
 function App() {
+  const [theme, settheme] = useState(localStorage.getItem("currentMode") ? localStorage.getItem("currentMode") : 'light');
+  const [SM, setSM] = useState(false);
   useEffect(() => {
-    window.addEventListener("scroll", () => {
-      if (window.scrollY >= 300) {
-        setshowScrollBtn(true);
-      } else {
-        setshowScrollBtn(false);
-      }
-    });
-  }, []);
-  const [showScrollBtn, setshowScrollBtn] = useState(false);
+    document.body.classList.toggle("light", theme === "light");
+    document.body.classList.toggle("dark", theme === "dark");
+  }, [theme]);
   return (
-    <div className="container dark" id="up">
+    <div className="app">
+      <button
+        className="mode flex"
+        onClick={() => {
+          localStorage.setItem(
+            "currentMode",
+            theme === "dark" ? "light" : "dark"
+          );
+
+          settheme(localStorage.getItem("currentMode"));
+          setSM(SM === false ? true : false);
+        }}
+
+        style={{boxShadow:`1px 1px 10px ${SM? 'orange' : ''}`}}
+      >
+        {theme === 'light' ? (
+          <span className="icon-sun" style={{ color: "orange" }}>
+          </span>
+        ) : (
+          <span className="icon-moon-o"> </span>
+        )}
+      </button>
       <Header />
       <Hero />
       <div className="divider" />
       <Main />
       <div className="divider" />
       <Contact />
-      <div className="divider" />
       <Footer />
       
-        <a
-          href="#up"
-          style={{ opacity: showScrollBtn ? 1 : 0, transition: "1s" }}
-        >
-          <button className="scroll2Top icon-keyboard_arrow_up"></button>
-        </a>
+    
      
     </div>
   );

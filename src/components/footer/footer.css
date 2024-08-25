@@ -1,30 +1,44 @@
-footer.flex {
-  justify-content: space-between;
-  padding-bottom: 1rem;
+.light footer {
+  margin-top: 50px;
+  padding: 3rem 0;
+  width: 100%;
+  background-color: #2d2e32 ;
 }
-
-footer.flex ul {
+.dark footer {
+  border-top:1px solid var(--divider);
+  margin-top: 50px;
+  padding: 3rem 0;
+  width: 100%;
+  background-color: transparent ;
+}
+footer  .container.flex{
+  justify-content: space-between;
+}
+footer  .container.flex p {
+  color: white;
+}
+footer ul {
   gap: 1rem;
 }
 
-footer.flex ul a {
-  color: var(--subtitle);
+footer ul a {
+  color: white;
   font-size: 0.9rem;
   font-weight: 400;
 }
 
-footer.flex ul a:hover {
+footer ul a:hover {
   color: var(--whiteblue);
   font-weight: 500;
 }
 
-footer.flex p {
+footer p {
   color: rgb(113, 113, 122);
   font-size: 0.9rem;
 }
 
 @media (max-width: 800px) {
-  footer.flex {
+  footer  .container.flex {
     flex-direction: column;
     gap: 2rem;
   }

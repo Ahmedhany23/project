@@ -1,26 +1,22 @@
 import { useEffect, useState } from "react";
 import "./header.css";
-
+import { motion,AnimatePresence } from "framer-motion";
 const Header = () => {
   const [model, setModel] = useState(false);
-  const [theme, settheme] = useState(localStorage.getItem("currentMode"));
-  const [SM, setSM] = useState(false);
-  useEffect(() => {
-    document.body.classList.toggle("light", theme === "light");
-    document.body.classList.toggle("dark", theme === "dark");
-  }, [theme]);
+
   return (
     <header className="flex">
+     
+      <h3 className="logo">Ahmed.dev</h3>
       <button
         className="model icon-menu flex"
         onClick={() => {
           setModel(true);
         }}
       />
-      <div />
       <ul className="menu">
         <li>
-          <a href="">About</a>
+          <a href="#">About</a>
         </li>
 
         <li>
@@ -29,34 +25,14 @@ const Header = () => {
         <li>
           <a href="#contact">Contact us</a>
         </li>
-        <li>
-              <a href="/AhmedHanyCv.pdf">Cv</a>
-            </li>
       </ul>
 
-      <button
-        className="mode flex"
-        onClick={() => {
-          localStorage.setItem(
-            "currentMode",
-            theme === "dark" ? "light" : "dark"
-          );
 
-          settheme(localStorage.getItem("currentMode"));
-          setSM(SM === false ? true : false);
-        }}
-      >
-        {SM ? (
-          <span className="icon-sun" style={{ color: "orange" }}>
-            {" "}
-          </span>
-        ) : (
-          <span className="icon-moon-o"> </span>
-        )}
-      </button>
-      {model && (
-        <div className="menu_res">
-          <ul>
+
+        <AnimatePresence mode="wait">
+        {model && (
+        <motion.div initial={{opacity:0.9}} animate={{opacity:1}} exit={{opacity:0.9}} className="menu_res">
+          <motion.ul  initial={{scale:1.2}} animate={{scale:1}} exit={{scale:0.9}}  transition={{ duration:0.5 , stiffness:300 , damping:20}}>
             <li>
               <button
                 className="menu_close icon-clear"
@@ -65,8 +41,8 @@ const Header = () => {
                 }}
               />
             </li>
-            <li>
-              <a href="">About</a>
+            <li >
+              <a href="#">About</a>
             </li>
 
             <li>
@@ -75,12 +51,11 @@ const Header = () => {
             <li>
               <a href="#contact">Contact us</a>
             </li>
-            <li>
-              <a href="/AhmedHanyCv.pdf">Cv</a>
-            </li>
-          </ul>
-        </div>
+          </motion.ul>
+        </motion.div>
       )}
+        </AnimatePresence>
+      
     </header>
   );
 };

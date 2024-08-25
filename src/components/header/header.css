@@ -2,22 +2,27 @@ header.flex {
   justify-content: space-between;
   align-items: center;
   margin-top: 1.5rem;
+  padding-inline: 30px;
+}
+header.flex .logo{
+  color: var(--title);
+  font-family: "Dancing Script", cursive;
+  font-weight: 400;
+  font-size: 1.5rem;
 }
 header.flex ul.menu {
   display: flex;
-  gap: 2rem;
+  gap: 4rem;
   list-style: none;
-  box-shadow: 0px 0px 31px var(--divider);
-  border-radius: 2rem;
-  padding: 1rem 2rem;
-  background-color: var(--nav);
+
 }
 header.flex ul.menu li a {
   text-decoration: none;
   color: var(--title);
-  font-weight: 500;
-  font-size: 1.1rem;
+  font-size: 1rem;
+  font-weight: 300;
   transition: 0.3s linear;
+  font-family: 'Inter', sans-serif;
 }
 header.flex ul li a:hover {
   color: var(--whiteblue);
@@ -46,19 +51,8 @@ header.flex .menu_res ul {
   padding: 1rem 2rem;
   border-radius: 2rem;
   background-color: var(--innerColor);
-  animation: mynav 0.5s linear forwards;
 }
-@keyframes mynav {
-  0% {
-    transform: scale(0);
-  }
-  60% {
-    transform: scale(1.2);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
+
 header.flex .menu_res ul li {
   border-bottom: 1px solid var(--divider);
   padding-bottom: 0.77rem;
@@ -88,34 +82,23 @@ header.flex .menu_res ul li:first-child {
 /* IconButton */
 header .icon-menu,
 header button.mode {
-  background-color: var(--primary);
-  height: 2.4rem;
-  width: 2.4rem;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  border-radius: 50%;
-  color: var(--button);
-  border: 1px solid rgba(241, 250, 114, 0.247);
-  transition: 0.2s linear;
+
+  color: var(--title);
+  font-size: 1.5rem;
+  font-weight: 300;
 }
-header .icon-menu:hover,
-header button.mode:hover {
-  color: white;
-  border: 1px solid rgba(241, 250, 114, 0.425);
-}
+
 header button.mode {
   margin-right: 2rem;
 }
 header li button.icon-clear {
-  font-size: 1.3rem;
+  font-size: 1.6rem;
   transition: 0.5s linear;
   color: var(--title);
 }
 header li button.icon-clear:hover {
   color: crimson;
   font-weight: bold;
-  font-size: 1.6rem;
   rotate: 180deg;
 }
 @media (max-width: 768px) {

@@ -131,7 +131,7 @@ const Main = () => {
                 layout
                 initial={{ transform: "scale(0)" }}
                 animate={{ transform: "scale(1)" }}
-                transition={{ type: "spring", damping: 8, stiffness: 50 }}
+                transition={{ type: "spring", damping: 10, stiffness: 80 }}
                 key={params.imgPath}
                 className="card "
               >
@@ -160,6 +160,7 @@ const Main = () => {
           })}
         </AnimatePresence>
       </section>
+      
     </main>
   );
 };

@@ -7,8 +7,9 @@ const Contact = () => {
   const [state, handleSubmit] = useForm("mzbnbzng");
 
   return (
-    <section id="contact"className="contact-us">
-      <h1 className="title">
+    <section id="contact"className="contact-us ">
+     <div>
+     <h1 className="title">
         <span className="icon-envelope"> </span>
         Contact us
       </h1>
@@ -16,8 +17,7 @@ const Contact = () => {
         Contact us for more information and get notified when i publish
         something new.
       </p>
-      <div className="flex" style={{justifyContent:"space-between"}}>
-        <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit}>
           <div className="flex">
             <label htmlFor="email">Email Address: </label>
             <input required type="email" name="email" id="email" />
@@ -52,12 +52,16 @@ const Contact = () => {
             </p>
           )}
         </form>
+     </div>
+    
+  
+       
         <Lottie
                className="animation"
                 style={{ height: 400}}
                 animationData={email}
               />
-      </div>
+
     </section>
   );
 };

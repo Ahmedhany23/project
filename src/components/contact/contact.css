@@ -1,3 +1,9 @@
+section.contact-us{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+}
 section.contact-us .icon-envelope {
   color: var(--subtitle);
   margin-right: 1rem;
@@ -65,7 +71,7 @@ section.contact-us .submit:hover {
   scale: 0.97;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 850px) {
   section.contact-us .animation {
     display: none;
   }

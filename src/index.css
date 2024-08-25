@@ -1,6 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Mulish:ital,wght@0,500;1,500&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 :root {
-  --primary:#000;
+  --primary: #000;
   --bgColor: #000;
   --innerColor: #18181b;
   --divider: #252529;
@@ -9,28 +9,29 @@
   --title: rgb(244 244 245);
   --subtitle: rgb(161 161 170);
   --icon-hover: #d4d4d8;
-  --button:rgba(255, 255, 255, 0.527)
+  --button: rgba(255, 255, 255, 0.527);
 }
 
 .light {
-  --button:rgba(26, 25, 25, 0.733);
+  --button: rgba(26, 25, 25, 0.733);
   --primary: rgb(236, 236, 236);
-  --innerColor: rgb(255,255,255);
-  --divider: rgb(202,202,202,0.518);
-  --title: rgb(39 39 42);
+  --innerColor: rgb(255, 255, 255);
+  --divider: rgb(202, 202, 202, 0.518);
+  --title: #2d2e32;
   --subtitle: rgb(82 82 91);
   --whiteblue: rgb(0, 149, 246);
-  --nav: rgb(253,253,253);
+  --nav: rgb(253, 253, 253);
   --icon-hover: #333;
 }
 html {
   box-sizing: border-box;
-  scrollbar-color: #888 #18181b;
   scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: #8e8e8e #fff;
 }
 
 ::-webkit-scrollbar {
-  width: .8rem;
+  width: 0.8rem;
 }
 
 ::-webkit-scrollbar-track {
@@ -56,7 +57,7 @@ html {
 * {
   margin: 0;
   padding: 0;
-  font-family: "Roboto", sans-serif;
+  font-family: "Inter", sans-serif;
 }
 .flex {
   display: flex;
@@ -77,12 +78,10 @@ a {
   border: 1px solid red;
 }
 .container {
-  background-color: var(--innerColor);
-  width: 80%;
-  border: 2px solid var(--divider);
+  width: 60%;
   margin-left: auto;
   margin-right: auto;
-  padding: 0 4.7rem;
+
 }
 
 @media (max-width: 600px) {
@@ -90,16 +89,12 @@ a {
     max-width: 100%;
     padding: 0 1.75rem;
   }
-  .divider {
-    width: calc(100% + 1.75rem + 1.75rem) !important;
-    margin-left: -1.75rem !important;
+
+  .scroll2Top {
+    width: 2.2rem;
+    height: 2.2rem;
+    opacity: 0.6;
   }
-  
-.scroll2Top{
- width: 2.2rem;
- height: 2.2rem;
- opacity: 0.6;
-}
 }
 
 @media (max-width: 1000px) {
@@ -107,17 +102,11 @@ a {
     width: 100%;
     padding: 0 1.75rem;
   }
-
-  .divider {
-    width: calc(100% + 1.75rem + 1.75rem) !important;
-    margin-left: -1.75rem !important;
-  }
 }
 
 .divider {
   border-bottom: 1px solid var(--divider);
-  width: calc(100% + 4.7rem + 4.7rem);
-  margin-left: -4.7rem;
+  width: 100%;
   margin-top: 3rem;
   margin-bottom: 3rem;
 }
@@ -131,13 +120,13 @@ button:hover {
 button:active {
   scale: 0.95;
 }
-button:disabled{
+button:disabled {
   opacity: 0.4;
   cursor: not-allowed;
 }
 
-.scroll2Top{
-  background-color: rgba(25,118,210,0.85);
+.scroll2Top {
+  background-color: rgba(25, 118, 210, 0.85);
   width: 2.6rem;
   height: 2.6rem;
   border-radius: 50%;
@@ -149,6 +138,31 @@ button:disabled{
   transition: 3s;
   color: var(--nav);
 }
-.scroll2Top:hover{
-    background-color: rgba(25,118,210);
+.scroll2Top:hover {
+  background-color: rgba(25, 118, 210);
+}
+
+.mode {
+  background-color: transparent;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  position: absolute;
+  top: 10%;
+  left: 30px;
+}
+.mode .icon-sun {
+animation: sun infinite linear;
+}
+@keyframes sun {
+  from {
+    rotate: 180deg;
+  }
+  to {
+    rotate: 1deg;
+  }
+}
+.mode.flex {
+  justify-content: center;
+  align-items: center;
 }
