@@ -78,7 +78,7 @@ a {
   border: 1px solid red;
 }
 .container {
-  width: 60%;
+  width: 80%;
   margin-left: auto;
   margin-right: auto;
 
@@ -103,7 +103,9 @@ a {
     padding: 0 1.75rem;
   }
 }
-
+.app{
+  position: relative;
+}
 .divider {
   border-bottom: 1px solid var(--divider);
   width: 100%;
@@ -148,20 +150,27 @@ button:disabled {
   height: 30px;
   border-radius: 50%;
   position: absolute;
-  top: 10%;
+  top: 3.1%;
   left: 30px;
 }
 .mode .icon-sun {
-animation: sun infinite linear;
+  -webkit-animation:spin 4s linear infinite;
+  -moz-animation:spin 4s linear infinite;
+  animation:spin 4s linear infinite;
 }
-@keyframes sun {
-  from {
-    rotate: 180deg;
-  }
-  to {
-    rotate: 1deg;
-  }
+@-moz-keyframes spin { 
+  100% { -moz-transform: rotate(360deg); } 
 }
+@-webkit-keyframes spin { 
+  100% { -webkit-transform: rotate(360deg); } 
+}
+@keyframes spin { 
+  100% { 
+      -webkit-transform: rotate(360deg); 
+      transform:rotate(360deg); 
+  } 
+}
+
 .mode.flex {
   justify-content: center;
   align-items: center;

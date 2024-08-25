@@ -101,6 +101,7 @@ section .first_section .cv-btn{
   font-size: 1.05rem;
   text-transform: capitalize;
   opacity: 0.9;
+  color: white;
   border-radius: 0.4rem;
   transition: 0.5s linear;
   border: 1px solid var(--whiteblue);
@@ -127,5 +128,7 @@ section .first_section .cv-btn:hover{
   section .first_section .tech.flex {
     flex-direction: column;
   }
- 
+  section .first_section .cv-btn{
+ margin-inline: auto;
+  }
 }

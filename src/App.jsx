@@ -14,7 +14,7 @@ function App() {
     document.body.classList.toggle("dark", theme === "dark");
   }, [theme]);
   return (
-    <div className="app">
+    <div className="app container">
       <button
         className="mode flex"
         onClick={() => {
