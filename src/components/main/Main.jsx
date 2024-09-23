@@ -110,7 +110,7 @@ const Main = () => {
           onClick={() => {
             setActive("react");
             const newArr = myProjects.filter((item) => {
-              return item.category[1] || item.category == "react";
+              return item.category[1] == "react" || item.category == "react";
             });
             setArr(newArr);
           }}
