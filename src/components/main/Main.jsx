@@ -4,11 +4,19 @@ import { AnimatePresence, motion } from "framer-motion";
 const myProjects = [
   {
     ProjectName: "Moviepick",
-    category: "react",
+    category: ["next","react"],
     imgPath: "/Landing9.jpg",
     WURL: "https://moviepick-black.vercel.app/",
     GURL: "https://github.com/Ahmedhany23/movies",
     text: " Moviepick is a web application focused on movies, designed to help users discover and explore films.",
+  },
+  {
+    ProjectName: "Weather",
+    category: "react",
+    imgPath: "/Landing10.jpg",
+    WURL: " https://weather-eosin-three.vercel.app/",
+    GURL: "https://github.com/Ahmedhany23/weather",
+    text: " Weather is a web application focused on weather, Provides daily update of the Weather.",
   },
   {
     ProjectName: "Eccomerce-React",
@@ -52,7 +60,7 @@ const myProjects = [
   },
   {
     ProjectName: "Ecommerce",
-    category: "next",
+    category: ["next","react"],
     imgPath: "/Landing3.png",
     WURL: "https://ecommerce-2025.vercel.app/",
     GURL: "https://github.com/Ahmedhany23/ecommerce",
@@ -102,7 +110,7 @@ const Main = () => {
           onClick={() => {
             setActive("react");
             const newArr = myProjects.filter((item) => {
-              return item.category == "react";
+              return item.category[1] || item.category == "react";
             });
             setArr(newArr);
           }}
@@ -114,7 +122,7 @@ const Main = () => {
           onClick={() => {
             setActive("next");
             const newArr = myProjects.filter((item) => {
-              return item.category == "next";
+              return item.category[0] == "next";
             });
             setArr(newArr);
           }}
