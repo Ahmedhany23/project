@@ -13,7 +13,7 @@ const myProjects = [
   {
     ProjectName: "Weather",
     category: "react",
-    imgPath: "/Landing10.jpg",
+    imgPath: "/Landing10.png",
     WURL: " https://weather-eosin-three.vercel.app/",
     GURL: "https://github.com/Ahmedhany23/weather",
     text: " Weather is a web application focused on weather, Provides daily update of the Weather.",
