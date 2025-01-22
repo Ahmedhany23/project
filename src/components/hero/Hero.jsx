@@ -1,3 +1,4 @@
+import { LettersPullUp } from "../../animation/LettersPullUp";
 import "./hero.css";
 
 import { motion } from "framer-motion";
@@ -11,7 +12,8 @@ const Hero = () => {
           transition={{ duration: 2 }}
           className="title"
         >
-          Front-End React Developer
+          <LettersPullUp text="Hi There, I'm Ahmed Hany" />
+
           <img
             src="/blob.png"
             alt="Blob-Icon"
@@ -20,9 +22,9 @@ const Hero = () => {
             height={40}
           />
         </motion.h1>
+
         <p className="subtitle">
-          Hi, I&apos;m Ahmed Hany. A passionate Front-end React Developer based
-          in Egypt , Giza . 📍
+          A passionate React Front-end Developer based in Egypt , Giza . 📍
         </p>
         <div className="icons">
           <div>
@@ -71,20 +73,50 @@ const Hero = () => {
         <div className="tech flex">
           <p className="tech-title">Tech Stack</p>
           <ul className="tech-skills flex">
-            <motion.li whileHover={{y:-10}} transition={{duration:.2}}><img src="https://skillicons.dev/icons?i=html,css" alt="skill-icon" width={80} height={40}/></motion.li>
-            <motion.li whileHover={{y:-10}} transition={{duration:.2}}><img src="https://skillicons.dev/icons?i=js,ts" alt="skill-icon" width={80} height={40}/></motion.li>
-            <motion.li whileHover={{y:-10}} transition={{duration:.2}}><img src="https://skillicons.dev/icons?i=react,next" alt="skill-icon" width={80} height={40}/></motion.li>
-            <motion.li whileHover={{y:-10}} transition={{duration:.2}}><img src="https://skillicons.dev/icons?i=tailwind,scss" alt="skill-icon" width={80} height={40}/></motion.li>
+            <motion.li whileHover={{ y: -10 }} transition={{ duration: 0.2 }}>
+              <img
+                src="https://skillicons.dev/icons?i=html,css"
+                alt="skill-icon"
+                width={80}
+                height={40}
+              />
+            </motion.li>
+            <motion.li whileHover={{ y: -10 }} transition={{ duration: 0.2 }}>
+              <img
+                src="https://skillicons.dev/icons?i=js,ts"
+                alt="skill-icon"
+                width={80}
+                height={40}
+              />
+            </motion.li>
+            <motion.li whileHover={{ y: -10 }} transition={{ duration: 0.2 }}>
+              <img
+                src="https://skillicons.dev/icons?i=react,next"
+                alt="skill-icon"
+                width={80}
+                height={40}
+              />
+            </motion.li>
+            <motion.li whileHover={{ y: -10 }} transition={{ duration: 0.2 }}>
+              <img
+                src="https://skillicons.dev/icons?i=tailwind,scss"
+                alt="skill-icon"
+                width={80}
+                height={40}
+              />
+            </motion.li>
           </ul>
         </div>
-        <a className="cv-btn" href="/AhmedHanyCv.pdf">Download My CV</a>
+        <a className="cv-btn" href="/AhmedHanyCv.pdf">
+          Download My CV
+        </a>
       </div>
       <div className="second_section">
         <motion.img
           initial={{ transform: "scale(0)" }}
           animate={{ transform: "scale(1.1)" }}
           transition={{ damping: 6, type: "sping", stiffness: 100 }}
-          src="/image.png"
+          src="/5X5.jpg"
           alt="myimage"
           width={377}
           height={377}

@@ -1,0 +1,91 @@
+/* ABOUT */
+
+.AboutPage {
+  margin-top: 4rem;
+  gap: 3rem;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+.AboutText {
+  width: 50%;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: 1.2px;
+}
+
+.AboutTextHeading {
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(1.5rem, 10vw, 2.4rem);
+  font-weight: 700;
+  color: var(--title);
+  margin: 24px 0;
+  line-height: 1.2;
+}
+.AboutTextHeading p {
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(1.5rem, 10vw, 2.4rem);
+  font-weight: 700;
+  color: var(--title);
+  margin: 24px 0;
+  line-height: 1.2;
+}
+.AboutText p {
+  color: var(--title);
+  font-family: "Mulish", sans-serif;
+  line-height: 1.6;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+.illustration {
+  max-width: 377px;
+  height: 377px;
+  width: 100%;
+}
+
+@media (max-width: 900px) {
+  .AboutPage {
+    display: block;
+    text-align: center;
+    padding: 30px;
+  }
+  .AboutText {
+    text-align: left;
+    display: inline-block;
+    width: 95%;
+    line-height: 24px;
+    letter-spacing: 0.6px;
+    margin-bottom: 80px;
+  }
+  .AboutTextHeading {
+    font-size: 26px;
+  }
+}
+
+.about__card {
+  background: var(--background-color-alt);
+  border: 1px solid transparent;
+  border-radius: 1rem;
+  padding: 2rem;
+  width: 200px;
+  text-align: center;
+}
+
+.about__card:hover {
+  background: transparent;
+  border-color: var(--color-primary-alt);
+  transition: var(--transition);
+}
+
+.about__icon {
+  color: var(--color-primary);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+.AboutImage {
+  max-width: 377px;
+  width: 100%;
+  border-radius: 50px;
+}

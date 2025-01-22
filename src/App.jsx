@@ -5,9 +5,15 @@ import Footer from "./components/footer/Footer";
 import Header from "./components/header/Header";
 import Hero from "./components/hero/Hero";
 import Main from "./components/main/Main";
+import About from "./components/about/about";
+import Experience from "./components/experience/Experience";
 
 function App() {
-  const [theme, settheme] = useState(localStorage.getItem("currentMode") ? localStorage.getItem("currentMode") : 'light');
+  const [theme, settheme] = useState(
+    localStorage.getItem("currentMode")
+      ? localStorage.getItem("currentMode")
+      : "light"
+  );
   const [SM, setSM] = useState(false);
   useEffect(() => {
     document.body.classList.toggle("light", theme === "light");
@@ -26,12 +32,10 @@ function App() {
           settheme(localStorage.getItem("currentMode"));
           setSM(SM === false ? true : false);
         }}
-
-        style={{boxShadow:`1px 1px 10px ${SM? 'orange' : ''}`}}
+        style={{ boxShadow: `1px 1px 10px ${SM ? "orange" : ""}` }}
       >
-        {theme === 'light' ? (
-          <span className="icon-sun" style={{ color: "orange" }}>
-          </span>
+        {theme === "light" ? (
+          <span className="icon-sun" style={{ color: "orange" }}></span>
         ) : (
           <span className="icon-moon-o"> </span>
         )}
@@ -39,13 +43,14 @@ function App() {
       <Header />
       <Hero />
       <div className="divider" />
+      <About />
+      <div className="divider" />
+      <Experience/>
+      <div className="divider" />
       <Main />
       <div className="divider" />
       <Contact />
       <Footer />
-      
-    
-     
     </div>
   );
 }

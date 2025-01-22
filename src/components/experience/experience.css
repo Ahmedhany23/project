@@ -1,0 +1,45 @@
+.title-experience {
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(1.5rem, 10vw, 2.4rem);
+  font-weight: 700;
+  color: var(--title);
+  margin: 24px 0;
+  line-height: 1.2;
+}
+.Etitle{
+    font-family: "Poppins", sans-serif;
+    font-size: 1.2rem
+    font-weight: 700;
+    color: white;
+    margin: 24px 0;
+    line-height: 1.2;
+}
+.company_name{
+    color: #aaa6c3;
+    font-family: "Mulish", sans-serif;
+    line-height: 1.6;
+    font-weight: 500;
+    font-size: 0.16px;
+}
+.subtitle-experience {
+  color: var(--title);
+  font-family: "Mulish", sans-serif;
+  line-height: 1.6;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+.points{
+    list-style: disc!important;
+    margin-top: 20px;
+  list-style-type: disc;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.point {
+    font-size: 14px;
+    color: #f3f3f3;
+    letter-spacing: 0.05em;
+}
+
