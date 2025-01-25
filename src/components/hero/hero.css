@@ -37,7 +37,7 @@ section .first_section {
 
 section .first_section .title {
   font-family: "Poppins", sans-serif;
-  font-size: clamp(1.5rem, 10vw, 2.4rem);
+  font-size: 2.4rem;
   font-weight: 700;
   color: var(--title);
   margin: 24px 0;
@@ -110,6 +110,12 @@ section .first_section .cv-btn:hover{
   opacity: 1;
 }
 @media (max-width: 900px) {
+  section .first_section .title {
+
+    font-size: 1.6rem;
+
+
+  }
   .hero.flex {
     flex-direction: column-reverse;
     align-items: center;
