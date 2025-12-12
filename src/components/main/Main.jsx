@@ -21,7 +21,7 @@ const myProjects = [
   },
 
   {
-    ProjectName: "RebelRover",
+    ProjectName: "Rebelrover",
     category: "react",
     imgPath: "/Landing6.JPG",
     WURL: "https://rebelrover.vercel.app/",
@@ -29,7 +29,7 @@ const myProjects = [
     text: " Responsive Design with Tailwindcss and Using Framer Motion",
   },
   {
-    ProjectName: "JobStack",
+    ProjectName: "Jobstack",
     category: "react",
     imgPath: "/Landing8.PNG",
     WURL: "https://jobstack-delta.vercel.app/",
@@ -37,7 +37,7 @@ const myProjects = [
     text: " Responsive Design with Tailwindcss and Using Framer Motion",
   },
   {
-    ProjectName: "VivaDecor",
+    ProjectName: "Vivadecor",
     category: ["css", "js"],
     imgPath: "/Landing2.png",
     WURL: "https://vivadecor-three.vercel.app/",
