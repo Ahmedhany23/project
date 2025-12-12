@@ -3,29 +3,23 @@ import "./main.css";
 import { AnimatePresence, motion } from "framer-motion";
 const myProjects = [
   {
+    ProjectName: "Excluvio",
+    category: ["next", "react"],
+    imgPath: "/Landing4.png",
+    WURL: "https://excluvio.vercel.app/",
+    GURL: "https://github.com/Ahmedhany23/excluvio",
+    text: "An E-commerce platform to browse, search, and purchase products seamlessly.",
+  },
+
+  {
     ProjectName: "Moviepick",
-    category: ["next","react"],
+    category: ["next", "react"],
     imgPath: "/Landing9.jpg",
     WURL: "https://moviepick-black.vercel.app/",
     GURL: "https://github.com/Ahmedhany23/movies",
     text: " Moviepick is a web application focused on movies, designed to help users discover and explore films.",
   },
-  {
-    ProjectName: "Weather",
-    category: "react",
-    imgPath: "/Landing10.png",
-    WURL: " https://weather-eosin-three.vercel.app/",
-    GURL: "https://github.com/Ahmedhany23/weather",
-    text: " Weather is a web application focused on weather, Provides daily update of the Weather.",
-  },
-  {
-    ProjectName: "Eccomerce-React",
-    category: "react",
-    imgPath: "/Landing4.png",
-    WURL: "https://ecommerce-reactapp-eta.vercel.app/",
-    GURL: "https://github.com/Ahmedhany23/ecommerce-reactapp",
-    text: "An E-commerce platform to browse, search, and purchase products seamlessly.",
-  },
+
   {
     ProjectName: "RebelRover",
     category: "react",
@@ -49,22 +43,6 @@ const myProjects = [
     WURL: "https://vivadecor-three.vercel.app/",
     GURL: "https://github.com/Ahmedhany23/WebmasterTask2/tree/main/task1",
     text: " Responsive Design with Tailwindcss and Using JavaScript",
-  },
-  {
-    ProjectName: "Solar",
-    category: ["css"],
-    imgPath: "/Landing.png",
-    WURL: "https://solar-web-master.vercel.app/",
-    GURL: "https://github.com/Ahmedhany23/WebmasterTasks/tree/main/task1",
-    text: " Responsive Design with Html&CSS",
-  },
-  {
-    ProjectName: "Ecommerce",
-    category: ["next","react"],
-    imgPath: "/Landing3.png",
-    WURL: "https://ecommerce-2025.vercel.app/",
-    GURL: "https://github.com/Ahmedhany23/ecommerce",
-    text: " This project is built using Node.js for the backend API and Firebase for authentication, providing a seamless shopping experience with features like product search, category filters, and user reviews.",
   },
 ];
 const Main = () => {
@@ -168,7 +146,6 @@ const Main = () => {
           })}
         </AnimatePresence>
       </section>
-      
     </main>
   );
 };

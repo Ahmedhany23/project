@@ -41,8 +41,8 @@ const experiences = [
   {
     title: "Intern Front End Devloper",
     company_name: "Web Master Intern",
-    icon: "https://media.licdn.com/dms/image/v2/D4D0BAQFIwfbOUpEgFg/company-logo_200_200/company-logo_200_200/0/1719256361352?e=1745452800&v=beta&t=F3QvKqQtH39VF9nNEAcI1TrYA56v2aC3SJ8vr0EPjc4",
-    iconBg: "#383E56",
+    icon: "web-masters.png",
+    iconBg: "#fff",
     date: "July 2024 - Aug 2024",
     link: "",
     points: [
