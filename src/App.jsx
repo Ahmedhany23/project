@@ -6,7 +6,9 @@ import Footer from "./components/footer/Footer";
 import Header from "./components/header/Header";
 import Hero from "./components/hero/Hero";
 import Main from "./components/main/Main";
+import Plan from "./components/plan/Plan";
 import Skills from "./components/skills/Skills";
+import Testimonials from "./components/testimonials/Testimonials";
 
 function App() {
   return (
@@ -48,7 +50,23 @@ function App() {
 
         <section className="section-full">
           <div className="container">
+            <Testimonials />
+          </div>
+        </section>
+
+        <div className="divider container" />
+
+        <section className="section-full">
+          <div className="container">
             <Main />
+          </div>
+        </section>
+
+        <div className="divider container" />
+
+        <section className="section-full">
+          <div className="container">
+            <Plan />
           </div>
         </section>
 

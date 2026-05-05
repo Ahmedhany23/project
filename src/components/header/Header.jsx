@@ -23,12 +23,17 @@ const Header = () => {
         <li>
           <a href="#experience">Experience</a>
         </li>
-
         <li>
-          <a href="#project">Projects</a>
+          <a href="#testimonials">Testimonials</a>
         </li>
         <li>
-          <a href="#contact">Contact us</a>
+          <a href="#project">Projects</a>
+        </li>{" "}
+        <li>
+          <a href="#plan">Plan</a>
+        </li>
+        <li>
+          <a href="#contact">Contact</a>
         </li>
       </ul>
 
@@ -41,7 +46,7 @@ const Header = () => {
               exit={{ opacity: 0 }}
               className="menu-backdrop"
             />
-            
+
             <motion.div
               initial={{ x: "100%" }}
               animate={{ x: 0 }}
@@ -63,25 +68,27 @@ const Header = () => {
                 animate="open"
                 variants={{
                   open: {
-                    transition: { staggerChildren: 0.1, delayChildren: 0.2 }
+                    transition: { staggerChildren: 0.1, delayChildren: 0.2 },
                   },
                   closed: {
-                    transition: { staggerChildren: 0.05, staggerDirection: -1 }
-                  }
+                    transition: { staggerChildren: 0.05, staggerDirection: -1 },
+                  },
                 }}
               >
                 {[
                   { name: "About", href: "#about" },
                   { name: "Skills", href: "#skills" },
                   { name: "Experience", href: "#experience" },
+                  { name: "Plan", href: "#plan" },
+                  { name: "Testimonials", href: "#testimonials" },
                   { name: "Projects", href: "#project" },
-                  { name: "Contact", href: "#contact" }
+                  { name: "Contact", href: "#contact" },
                 ].map((link) => (
                   <motion.li
                     key={link.name}
                     variants={{
                       open: { opacity: 1, x: 0 },
-                      closed: { opacity: 0, x: 20 }
+                      closed: { opacity: 0, x: 20 },
                     }}
                   >
                     <a href={link.href} onClick={() => setModel(false)}>
