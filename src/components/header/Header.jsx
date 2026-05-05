@@ -18,6 +18,9 @@ const Header = () => {
           <a href="#about">About</a>
         </li>
         <li>
+          <a href="#skills">Skills</a>
+        </li>
+        <li>
           <a href="#experience">Experience</a>
         </li>
 
@@ -29,43 +32,66 @@ const Header = () => {
         </li>
       </ul>
 
-      <AnimatePresence mode="wait">
+      <AnimatePresence>
         {model && (
-          <motion.div
-            initial={{ opacity: 0.9 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0.9 }}
-            className="menu_res"
-          >
-            <motion.ul
-              initial={{ scale: 1.2 }}
-              animate={{ scale: 1 }}
-              exit={{ scale: 0.9 }}
-              transition={{ duration: 0.5, stiffness: 300, damping: 20 }}
+          <div className="menu-overlay" onClick={() => setModel(false)}>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="menu-backdrop"
+            />
+            
+            <motion.div
+              initial={{ x: "100%" }}
+              animate={{ x: 0 }}
+              exit={{ x: "100%" }}
+              transition={{ type: "spring", damping: 25, stiffness: 200 }}
+              className="menu-drawer"
+              onClick={(e) => e.stopPropagation()}
             >
-              <li>
+              <div className="drawer-header">
+                <span className="logo">Ahmed.dev</span>
                 <button
                   className="menu_close icon-clear"
-                  onClick={() => {
-                    setModel(false);
-                  }}
+                  onClick={() => setModel(false)}
                 />
-              </li>
-              <li>
-                <a href="#about">About</a>
-              </li>
-              <li>
-                <a href="#experience">Experience</a>
-              </li>
+              </div>
 
-              <li>
-                <a href="#project">Projects</a>
-              </li>
-              <li>
-                <a href="#contact">Contact us</a>
-              </li>
-            </motion.ul>
-          </motion.div>
+              <motion.ul
+                initial="closed"
+                animate="open"
+                variants={{
+                  open: {
+                    transition: { staggerChildren: 0.1, delayChildren: 0.2 }
+                  },
+                  closed: {
+                    transition: { staggerChildren: 0.05, staggerDirection: -1 }
+                  }
+                }}
+              >
+                {[
+                  { name: "About", href: "#about" },
+                  { name: "Skills", href: "#skills" },
+                  { name: "Experience", href: "#experience" },
+                  { name: "Projects", href: "#project" },
+                  { name: "Contact", href: "#contact" }
+                ].map((link) => (
+                  <motion.li
+                    key={link.name}
+                    variants={{
+                      open: { opacity: 1, x: 0 },
+                      closed: { opacity: 0, x: 20 }
+                    }}
+                  >
+                    <a href={link.href} onClick={() => setModel(false)}>
+                      {link.name}
+                    </a>
+                  </motion.li>
+                ))}
+              </motion.ul>
+            </motion.div>
+          </div>
         )}
       </AnimatePresence>
     </header>

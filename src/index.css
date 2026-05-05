@@ -1,193 +1,381 @@
-@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Mulish:ital,wght@0,500;1,500&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap");
+
+/* ============================================
+   DESIGN SYSTEM — High-Contrast Tech
+   From DESIGN.md
+   ============================================ */
 :root {
-  --primary: #000;
-  --bgColor: #000;
-  --innerColor: #18181b;
-  --divider: #252529;
-  --nav: #222225;
-  --whiteblue: rgb(93, 188, 252);
-  --title: rgb(244 244 245);
-  --subtitle: rgb(161 161 170);
-  --icon-hover: #d4d4d8;
-  --button: rgba(255, 255, 255, 0.527);
-  --background-color-alt: #2c2c6c;
-  --color-primary: #4db5ff;
-  --color-primary-alt: #4db5ff66;
+  /* === Surfaces === */
+  --surface: #131313;
+  --surface-dim: #131313;
+  --surface-bright: #3a3939;
+  --surface-container-lowest: #0e0e0e;
+  --surface-container-low: #1c1b1b;
+  --surface-container: #201f1f;
+  --surface-container-high: #2a2a2a;
+  --surface-container-highest: #353534;
+  --surface-variant: #353534;
+  --background: #131313;
+
+  /* === On-surfaces (text) === */
+  --on-surface: #e5e2e1;
+  --on-surface-variant: #bdcbae;
+  --on-background: #e5e2e1;
+  --inverse-surface: #e5e2e1;
+  --inverse-on-surface: #313030;
+
+  /* === Outline === */
+  --outline: #88957b;
+  --outline-variant: #3e4a34;
+
+  /* === Primary (electric green) === */
+  --primary: #f7ffe9;
+  --on-primary: #173800;
+  --primary-container: #7cfc00; /* electric green — CTAs */
+  --on-primary-container: #347000;
+  --inverse-primary: #316b00;
+  --surface-tint: #6ee000;
+  --primary-fixed: #82ff1a;
+  --primary-fixed-dim: #6ee000;
+  --on-primary-fixed: #0a2000;
+  --on-primary-fixed-variant: #245100;
+
+  /* === Secondary === */
+  --secondary: #c7c6c6;
+  --on-secondary: #2f3131;
+  --secondary-container: #464747;
+  --on-secondary-container: #b5b5b5;
+
+  /* === Tertiary === */
+  --tertiary: #fcfcfc;
+  --on-tertiary: #2f3131;
+  --tertiary-container: #dfdfdf;
+  --on-tertiary-container: #616263;
+
+  /* === Error === */
+  --error: #ffb4ab;
+  --on-error: #690005;
+  --error-container: #93000a;
+  --on-error-container: #ffdad6;
+
+  /* ======================================
+     SEMANTIC ALIASES (for convenience)
+     ====================================== */
+  --bg: var(--background);
+  --bg-alt: var(--surface-container-lowest);
+  --card-bg: var(--surface-container-low);
+  --card-border: rgba(136, 149, 123, 0.2); /* outline at 20% */
+  --card-border-hover: var(--outline);
+  --text-primary: var(--on-surface);
+  --text-secondary: var(--on-surface-variant);
+  --text-muted: var(--outline);
+  --accent: var(--primary-container); /* #7cfc00 */
+  --accent-dim: var(--primary-fixed-dim); /* #6ee000 */
+  --accent-glow: rgba(110, 224, 0, 0.2);
+
+  /* ======================================
+     TYPOGRAPHY  (from DESIGN.md)
+     ====================================== */
+  --font-display: "Space Grotesk", sans-serif;
+  --font-body: "Inter", sans-serif;
+
+  /* headline-lg */
+  --text-hl-size: clamp(2rem, 5vw, 68px);
+  --text-hl-weight: 700;
+  --text-hl-lh: 1.1;
+  --text-hl-ls: -0.02em;
+
+  /* headline-md */
+  --text-hm-size: clamp(1.5rem, 3vw, 52px);
+  --text-hm-weight: 600;
+  --text-hm-lh: 1.2;
+  --text-hm-ls: -0.01em;
+
+  /* headline-sm */
+  --text-hs-size: 24px;
+  --text-hs-weight: 600;
+  --text-hs-lh: 1.2;
+
+  /* body-lg */
+  --text-bl-size: 18px;
+  --text-bl-weight: 400;
+  --text-bl-lh: 1.6;
+
+  /* body-md */
+  --text-bm-size: 20px;
+  --text-bm-weight: 400;
+  --text-bm-lh: 1.6;
+
+  /* label-lg */
+  --text-ll-size: 14px;
+  --text-ll-weight: 500;
+  --text-ll-ls: 0.05em;
+
+  /* label-md */
+  --text-lm-size: 18px;
+  --text-lm-weight: 500;
+  --text-lm-ls: 0.05em;
+
+  /* ======================================
+     ROUNDED  (from DESIGN.md)
+     ====================================== */
+  --r-sm: 0.125rem; /* 2px  */
+  --r-base: 0.25rem; /* 4px  */
+  --r-md: 0.375rem; /* 6px  */
+  --r-lg: 0.5rem; /* 8px  */
+  --r-xl: 0.75rem; /* 12px */
+  --r-full: 9999px;
+
+  /* ======================================
+     SPACING  (8px grid — from DESIGN.md)
+     ====================================== */
+  --sp-xs: 4px;
+  --sp-sm: 12px;
+  --sp-md: 24px;
+  --sp-lg: 48px;
+  --sp-xl: 80px;
+  --sp-gutter: 24px;
+  --sp-margin: 32px;
+
+  /* ======================================
+     MISC
+     ====================================== */
+  --transition: 0.2s ease;
+  --transition-md: 0.35s ease;
 }
 
+/* Light-mode isn't defined in DESIGN.md — but keep a minimal override
+   so the existing toggle doesn't break the page entirely */
 .light {
-  --button: rgba(26, 25, 25, 0.733);
-  --primary: rgb(236, 236, 236);
-  --innerColor: rgb(255, 255, 255);
-  --divider: rgb(202, 202, 202, 0.518);
-  --title: #2d2e32;
-  --subtitle: rgb(82 82 91);
-  --whiteblue: rgb(0, 149, 246);
-  --nav: rgb(253, 253, 253);
-  --icon-hover: #333;
+  --bg: #f8f8f6;
+  --bg-alt: #efefeb;
+  --card-bg: #ffffff;
+  --card-border: rgba(62, 74, 52, 0.15);
+  --card-border-hover: #3e4a34;
+  --text-primary: #141412;
+  --text-secondary: #4a4a40;
+  --text-muted: #7d8573;
+  --surface-container-low: #ffffff;
+  --surface-container-lowest: #efefeb;
+  --surface-container: #f4f4f0;
+  --surface-container-high: #e9e9e4;
+  --outline: #6c7564;
+
+  /* High-contrast green for light mode */
+  --accent: #2d5a00; /* Darker green for contrast */
+  --accent-dim: #244a00;
+  --accent-glow: rgba(45, 90, 0, 0.15);
+  --on-primary: #ffffff;
 }
-html {
+
+/* ============================================
+   RESET & BASE
+   ============================================ */
+*,
+*::before,
+*::after {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
   scroll-behavior: smooth;
   scrollbar-width: thin;
-  scrollbar-color: #8e8e8e #fff;
+  scrollbar-color: var(--accent) var(--bg-alt);
 }
 
 ::-webkit-scrollbar {
-  width: 0.8rem;
+  width: 5px;
 }
-
 ::-webkit-scrollbar-track {
-  border: 7px solid #18181b;
-  border-radius: 2px;
+  background: var(--bg);
 }
-
 ::-webkit-scrollbar-thumb {
-  background: #888;
-  border-radius: 2px;
+  background: var(--accent);
+  border-radius: var(--r-base);
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background: #555;
-}
-
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  font-family: "Inter", sans-serif;
-}
-.flex {
-  display: flex;
-  align-items: center;
-}
 body {
-  color: #fff;
-  background-color: var(--primary);
+  font-family: var(--font-body);
+  font-size: var(--text-bm-size);
+  font-weight: var(--text-bm-weight);
+  line-height: var(--text-bm-lh);
+  background-color: var(--bg);
+  color: var(--text-primary);
+  transition:
+    background-color var(--transition-md),
+    color var(--transition-md);
+  overflow-x: hidden;
 }
+
 li {
   list-style: none;
 }
+img {
+  max-width: 100%;
+  display: block;
+}
+
 a {
-  color: var(--title);
+  color: inherit;
   text-decoration: none;
-}
-.border {
-  border: 1px solid red;
-}
-.container {
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-
+  transition: color var(--transition);
 }
 
-@media (max-width: 600px) {
-  .container {
-    max-width: 100%;
-    padding: 0 1.75rem;
-  }
-
-  .scroll2Top {
-    width: 2.2rem;
-    height: 2.2rem;
-    opacity: 0.6;
-  }
-}
-
-@media (max-width: 1000px) {
-  .container {
-    width: 100%;
-    padding: 0 1.75rem;
-  }
-}
-.app{
-  position: relative;
-}
-.divider {
-  border-bottom: 1px solid var(--divider);
-  width: 100%;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-}
 button {
   all: unset;
-}
-
-button:hover {
   cursor: pointer;
-}
-button:active {
-  scale: 0.95;
 }
 button:disabled {
   opacity: 0.4;
   cursor: not-allowed;
 }
-
-.scroll2Top {
-  background-color: rgba(25, 118, 210, 0.85);
-  width: 2.6rem;
-  height: 2.6rem;
-  border-radius: 50%;
-  position: fixed;
-  bottom: 2rem;
-  right: 3%;
-  text-align: center;
-  font-size: 1.5rem;
-  transition: 3s;
-  color: var(--nav);
-}
-.scroll2Top:hover {
-  background-color: rgba(25, 118, 210);
+button:active:not(:disabled) {
+  transform: scale(0.97);
 }
 
-.mode {
-  background-color: transparent;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  position: absolute;
-  top: 5%;
-  left: 30px;
-}
-.mode .icon-sun {
-  -webkit-animation:spin 4s linear infinite;
-  -moz-animation:spin 4s linear infinite;
-  animation:spin 4s linear infinite;
-}
-@-moz-keyframes spin { 
-  100% { -moz-transform: rotate(360deg); } 
-}
-@-webkit-keyframes spin { 
-  100% { -webkit-transform: rotate(360deg); } 
-}
-@keyframes spin { 
-  100% { 
-      -webkit-transform: rotate(360deg); 
-      transform:rotate(360deg); 
-  } 
+/* ============================================
+   LAYOUT  — fixed 12-column grid stage
+   ============================================ */
+.app {
+  position: relative;
 }
 
-.mode.flex {
-  justify-content: center;
-  align-items: center;
+/* Max content width with generous side margins */
+.container {
+  width: 100%;
+  max-width: 1600px;
+  margin-inline: auto;
+  padding-inline: var(--sp-margin); /* 32px each side */
 }
-.center-image{
-  justify-content: center;
+
+@media (max-width: 1024px) {
+  .container {
+    padding-inline: var(--sp-md);
+  } /* 24px */
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding-inline: var(--sp-sm);
+  } /* 12px */
+}
+
+/* ============================================
+   UTILITIES
+   ============================================ */
+.flex {
   display: flex;
   align-items: center;
-  height: 100%;
-  width: 100%;
 }
-.icon-image{
-  width: 60%;
-  height: 60%;
-  object-fit: contain;
 
+/* Label-md style — used for section eyebrows */
+.section-label {
+  font-family: var(--font-display);
+  font-size: var(--text-lm-size);
+  font-weight: var(--text-lm-weight);
+  letter-spacing: var(--text-lm-ls);
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+/* ============================================
+   DIVIDER
+   ============================================ */
+.divider {
+  width: 100%;
+  height: 1px;
+  background: var(--card-border);
+  margin-block: var(--sp-xl); /* 80px */
+}
+
+/* Sections get 80px vertical breathing room */
+.section-full > .container {
+  padding-block: var(--sp-xl); /* 80px */
+}
+
+/* Experience uses its own wide wrapper — add padding there too */
+.section-full > .vertical-timeline-wrapper,
+#experience {
+  padding-inline: var(--sp-margin);
+}
+
+/* ============================================
+   THEME TOGGLE
+   ============================================ */
+.mode {
+  position: fixed;
+  bottom: var(--sp-md);
+  right: var(--sp-md);
+  width: 40px;
+  height: 40px;
+  border-radius: var(--r-base);
+  background: var(--accent);
+  color: var(--on-primary);
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  transition: var(--transition);
+  border: 1px solid var(--accent-dim);
+}
+.mode:hover {
+  box-shadow: 0 0 12px var(--accent-glow);
+  transform: scale(1.05);
+}
+
+.icon-sun {
+  animation: spin 8s linear infinite;
+  color: var(--on-primary) !important;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ============================================
+   SCROLL TO TOP
+   ============================================ */
+.scroll2Top {
+  background: var(--surface-container-high);
+  border: 1px solid var(--card-border);
+  width: 40px;
+  height: 40px;
+  border-radius: var(--r-base);
+  position: fixed;
+  bottom: calc(var(--sp-md) + 52px);
+  right: var(--sp-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  color: var(--on-surface);
+  z-index: 998;
+  transition: var(--transition);
+}
+.scroll2Top:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  box-shadow: 0 0 10px var(--accent-glow);
+}
+
+/* ============================================
+   CENTER IMAGE UTILITY (experience icons)
+   ============================================ */
+.center-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+.icon-image {
+  width: 65%;
+  height: 65%;
+  object-fit: contain;
 }

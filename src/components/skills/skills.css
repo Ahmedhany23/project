@@ -1,0 +1,94 @@
+/* ============================================
+   SKILLS — High-Contrast Tech
+   ============================================ */
+
+.skills-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-lg); /* 48px */
+  width: 100%;
+}
+
+.skills-header {
+  text-align: center;
+  width: 100%;
+}
+
+.skills-header .section-label {
+  display: block;
+  margin-bottom: var(--sp-sm);
+}
+
+.skills-title {
+  font-family: var(--font-display);
+  font-size: var(--text-hm-size);
+  font-weight: var(--text-hm-weight);
+  line-height: var(--text-hm-lh);
+  letter-spacing: var(--text-hm-ls);
+  color: var(--text-primary);
+}
+
+/* Skills Grid */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--sp-md); /* 24px */
+  width: 100%;
+}
+
+/* Category Card */
+.skills-category-card {
+  background: var(--surface-container-low);
+  border: 1px solid var(--card-border);
+  border-radius: var(--r-lg);
+  padding: var(--sp-md);
+  transition: border-color var(--transition), box-shadow var(--transition), transform var(--transition);
+}
+
+.skills-category-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-4px);
+  box-shadow: 0 0 16px var(--accent-glow);
+}
+
+.category-title {
+  font-family: var(--font-display);
+  font-size: var(--text-hs-size); /* 24px */
+  font-weight: var(--text-hs-weight);
+  color: var(--accent);
+  margin-bottom: var(--sp-md);
+  border-bottom: 1px solid var(--card-border);
+  padding-bottom: var(--sp-xs);
+}
+
+/* Skills List & Chips */
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-xs) var(--sp-sm); /* 4px vertical, 12px horizontal */
+}
+
+.skill-chip {
+  font-family: var(--font-display);
+  font-size: var(--text-lm-size); /* 18px based on user's recent update in index.css */
+  font-weight: var(--text-lm-weight);
+  letter-spacing: var(--text-lm-ls);
+  color: var(--text-secondary);
+  background: var(--surface-container);
+  border: 1px solid var(--card-border);
+  padding: 4px 10px;
+  border-radius: var(--r-sm);
+  transition: var(--transition);
+}
+
+.skill-chip:hover {
+  color: var(--text-primary);
+  border-color: var(--accent);
+  background: rgba(110, 224, 0, 0.05);
+}
+
+@media (max-width: 640px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+}

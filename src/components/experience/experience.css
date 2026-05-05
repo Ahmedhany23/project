@@ -1,45 +1,114 @@
-.title-experience {
-  font-family: "Poppins", sans-serif;
-  font-size: clamp(1.5rem, 10vw, 2.4rem);
-  font-weight: 700;
-  color: var(--title);
-  margin: 24px 0;
-  line-height: 1.2;
-}
-.Etitle{
-    font-family: "Poppins", sans-serif;
-    font-size: 1.2rem
-    font-weight: 700;
-    color: white;
-    margin: 24px 0;
-    line-height: 1.2;
-}
-.company_name{
-    color: #aaa6c3;
-    font-family: "Mulish", sans-serif;
-    line-height: 1.6;
-    font-weight: 500;
-    font-size: 0.16px;
-}
-.subtitle-experience {
-  color: var(--title);
-  font-family: "Mulish", sans-serif;
-  line-height: 1.6;
-  font-weight: 500;
-  font-size: 0.9rem;
-}
-.points{
-    list-style: disc!important;
-    margin-top: 20px;
-  list-style-type: disc;
-  margin-left: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-.point {
-    font-size: 14px;
-    color: #f3f3f3;
-    letter-spacing: 0.05em;
+/* ============================================
+   EXPERIENCE — High-Contrast Tech
+   ============================================ */
+
+/* Section header */
+#experience {
+  text-align: center;
+  margin-bottom: var(--sp-lg);  /* 48px */
 }
 
+.subtitle-experience {
+  font-family: var(--font-display);
+  font-size: var(--text-lm-size);
+  font-weight: var(--text-lm-weight);
+  letter-spacing: var(--text-lm-ls);
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: var(--sp-sm);
+}
+
+.title-experience {
+  font-family: var(--font-display);
+  font-size: var(--text-hm-size);
+  font-weight: var(--text-hm-weight);
+  line-height: var(--text-hm-lh);
+  letter-spacing: var(--text-hm-ls);
+  color: var(--text-primary);
+}
+
+/* ── Override react-vertical-timeline ── */
+.vertical-timeline::before {
+  background: var(--outline-variant) !important;
+  width: 2px !important;
+}
+
+.vertical-timeline-element-content {
+  background: var(--surface-container-low) !important;
+  border: 1px solid var(--card-border) !important;
+  border-radius: var(--r-lg) !important;
+  box-shadow: none !important;
+  padding: var(--sp-md) !important;
+  transition: border-color var(--transition) !important;
+}
+
+.vertical-timeline-element-content:hover {
+  border-color: var(--accent) !important;
+  box-shadow: 0 0 16px var(--accent-glow) !important;
+}
+
+.vertical-timeline-element-content-arrow {
+  border-right-color: var(--card-border) !important;
+}
+
+.vertical-timeline-element-icon {
+  box-shadow:
+    0 0 0 3px var(--outline-variant),
+    0 4px 16px rgba(0, 0, 0, 0.5),
+    0 0 14px var(--accent-glow) !important;
+}
+
+/* Card content */
+.Etitle {
+  font-family: var(--font-display);
+  font-size: var(--text-hs-size);   /* 24px */
+  font-weight: var(--text-hs-weight);
+  line-height: var(--text-hs-lh);
+  color: var(--text-primary);
+  margin-bottom: var(--sp-xs);
+}
+
+.company_name {
+  font-family: var(--font-display);
+  font-size: var(--text-ll-size);   /* 14px */
+  font-weight: 500;
+  color: var(--accent) !important;
+  letter-spacing: 0.03em;
+  margin: 0;
+}
+
+.points {
+  list-style: none !important;
+  margin-top: var(--sp-sm);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-xs);
+}
+
+/* DESIGN.md: "Bullet points are replaced with geometric shapes (small squares or chevrons) in the primary green" */
+.point {
+  font-family: var(--font-body);
+  font-size: var(--text-bm-size);
+  color: var(--text-secondary);
+  line-height: 1.65;
+  padding-left: var(--sp-sm);
+  position: relative;
+}
+
+.point::before {
+  content: '›';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+/* Date label override */
+.vertical-timeline-element-date {
+  color: var(--text-muted) !important;
+  font-family: var(--font-display) !important;
+  font-size: var(--text-lm-size) !important;
+  font-weight: var(--text-lm-weight) !important;
+  letter-spacing: var(--text-lm-ls) !important;
+  text-transform: uppercase !important;
+}

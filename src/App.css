@@ -1,0 +1,19 @@
+/* page-content sits below the fixed 64px header */
+.page-content {
+  padding-top: 64px;
+}
+
+/* section wrapper — full width, content constrained inside .container */
+.section-full {
+  width: 100%;
+}
+
+/* Hero manages its own height — don't add extra block padding */
+.section-full:first-child > .container {
+  padding-block: 0;
+}
+
+/* divider contained to page margins */
+.divider.container {
+  margin-block: 0;
+}

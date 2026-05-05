@@ -1,103 +1,175 @@
-section.contact-us{
+/* ============================================
+   CONTACT — High-Contrast Tech
+   ============================================ */
+
+section.contact-us {
   display: flex;
-  justify-content: center;
+  gap: var(--sp-xl);   /* 80px */
   width: 100%;
-  align-items: center;
-}
-section.contact-us .icon-envelope {
-  color: var(--subtitle);
-  margin-right: 1rem;
-  font-size: 1.8rem;
 }
 
+/* Left: form column */
+section.contact-us > div:first-child {
+  flex: 1;
+
+}
+
+/* Eyebrow */
+section.contact-us > div:first-child::before {
+  content: '— Get In Touch';
+  display: block;
+  font-family: var(--font-display);
+  font-size: var(--text-lm-size);
+  font-weight: var(--text-lm-weight);
+  letter-spacing: var(--text-lm-ls);
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: var(--sp-sm);
+}
+
+/* Heading — headline-md */
 section.contact-us .title {
-  font-size: 2.1rem;
-  color: var(--title);
-  margin-bottom: 1rem;
-}
-section.contact-us .sub-title {
-  color: var(--subtitle);
-  margin-bottom: 2rem;
-  line-height: 1.6rem;
-}
-section.contact-us label {
-  color: var(--subtitle);
+  font-family: var(--font-display);
+  font-size: var(--text-hm-size);
+  font-weight: var(--text-hm-weight);
+  line-height: var(--text-hm-lh);
+  letter-spacing: var(--text-hm-ls);
+  color: var(--text-primary);
+  margin-bottom: var(--sp-sm);
+  display: flex;
+  align-items: center;
+  gap: var(--sp-sm);
 }
 
+section.contact-us .icon-envelope {
+  color: var(--accent);
+  font-size: 1.5rem;
+}
+
+section.contact-us .sub-title {
+  font-family: var(--font-body);
+  font-size: var(--text-bm-size);
+  color: var(--text-secondary);
+  line-height: var(--text-bm-lh);
+  margin-bottom: var(--sp-lg);  /* 48px */
+  max-width: 440px;
+}
+
+/* Form */
+section.contact-us form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-md);  /* 24px */
+}
+
+section.contact-us form .flex {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--sp-xs);
+}
+
+section.contact-us label {
+  font-family: var(--font-display);
+  font-size: var(--text-lm-size);   /* 12px — label-md */
+  font-weight: var(--text-lm-weight);
+  letter-spacing: var(--text-lm-ls);
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+/* DESIGN.md: "dark-gray fill slightly lighter than the background. Bottom border emphasized; when focused, transition to primary green." */
 section.contact-us #email,
 section.contact-us #message {
   all: unset;
-  background-color: rgba(63, 63, 70, 0.15);
-  border: 1px solid rgb(63 63 70);
-  width: 16rem;
-  padding: 0.5rem 1rem;
-  margin-left: 1rem;
-  border-radius: 5px;
-  transition: 0.3s;
+  display: block;
+  width: 100%;
+  padding: 10px var(--sp-sm);
+  background: var(--surface-container);
+  border: 1px solid var(--card-border);
+  border-bottom: 2px solid var(--outline);
+  border-radius: var(--r-base);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: var(--text-bm-size);
+  transition: border-color var(--transition), box-shadow var(--transition);
 }
-.light section.contact-us #email,
-.light section.contact-us #message{
-  background-color: rgba(221, 221, 221, 0.15);
-  color: var(--title);
 
+section.contact-us #email::placeholder,
+section.contact-us #message::placeholder {
+  color: var(--text-muted);
 }
-section.contact-us #email:focus,
-section.contact-us #message:focus {
-  border: 1px solid var(--title);
-}
+
 section.contact-us #email:hover,
 section.contact-us #message:hover {
-  border: 1px solid var(--title);
+  border-bottom-color: var(--on-surface-variant);
+}
+
+section.contact-us #email:focus,
+section.contact-us #message:focus {
+  border-bottom-color: var(--accent);
+  box-shadow: 0 2px 0 var(--accent), 0 0 12px var(--accent-glow);
+  outline: none;
 }
 
 section.contact-us #message {
-  min-height: 9rem;
+  min-height: 130px;
   resize: vertical;
 }
+
+/* Submit — primary solid button */
 section.contact-us .submit {
-  background-color: rgba(36, 37, 46, 1);
-
-  padding: 0.75rem 1.9rem;
-  text-align: center;
-  font-size: 1.05rem;
-  text-transform: capitalize;
-
-  border-radius: 0.4rem;
-  transition: 0.5s linear;
-  margin-top: 1.8rem;
-  border: 1px solid rgb(63 63 70);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px var(--sp-md);
+  border-radius: var(--r-base);
+  background: var(--accent);
+  color: var(--on-primary);
+  font-family: var(--font-display);
+  font-size: var(--text-ll-size);
+  font-weight: 700;
+  letter-spacing: var(--text-ll-ls);
+  text-transform: uppercase;
+  transition: var(--transition);
+  border: 1px solid var(--accent-dim);
+  align-self: flex-start;
+  margin-top: var(--sp-xs);
 }
-section.contact-us .submit:hover {
-  scale: 0.97;
+
+section.contact-us .submit:hover:not(:disabled) {
+  transform: scale(1.02);
+  box-shadow: 0 0 16px var(--accent-glow);
 }
 
+/* Success */
+section.contact-us .success {
+  align-items: center;
+  gap: var(--sp-xs);
+  font-size: var(--text-bm-size);
+  color: var(--accent);
+  margin-top: var(--sp-xs);
+}
+
+/* Lottie animation */
+section.contact-us .animation {
+  flex-shrink: 0;
+  width: clamp(200px, 30vw, 380px);
+  opacity: 0.85;
+  filter: drop-shadow(0 0 30px rgba(110, 224, 0, 0.1));
+}
+
+/* ── Responsive ── */
 @media (max-width: 850px) {
-  section.contact-us .animation {
-    display: none;
-  }
-  section.contact-us form {
-    display: flex;
+  section.contact-us {
     flex-direction: column;
-    align-self: center;
-    width: 95%;
+    gap: var(--sp-md);
   }
-  section.contact-us form div.flex {
-    flex-direction: column;
-    align-items: start;
-  }
-  section.contact-us #email,
-  section.contact-us #message {
-    margin-left: 0;
-    width: 100%;
-    padding: 0.5rem 0;
-    resize: both;
-  }
-  section.contact-us .submit{
-    width: 30%;
-    align-self: center;
-  }
-}
 
-.light section .success{
-  color: var(--title);
+  section.contact-us > div:first-child { max-width: 100%; }
+  section.contact-us .animation        { display: none; }
+
+  section.contact-us .submit {
+    align-self: stretch;
+    text-align: center;
+  }
 }
