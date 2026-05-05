@@ -4,9 +4,9 @@ const Footer = () => {
   return (
     <footer>
       <div className="container flex">
-      <p>Copyright © 2024. All rights are reserved</p>
-      <ul className="flex">
-      <div>
+        <p>Copyright © {new Date().getFullYear()}. All rights are reserved</p>
+        <ul className="flex">
+          <div>
             <a href="https://github.com/Ahmedhany23">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -48,11 +48,8 @@ const Footer = () => {
               </svg>
             </a>
           </div>
-      </ul>
-
-      
+        </ul>
       </div>
-      
     </footer>
   );
 };

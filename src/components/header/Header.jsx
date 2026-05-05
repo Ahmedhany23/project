@@ -6,7 +6,10 @@ const Header = () => {
 
   return (
     <header className="flex">
-      <h3 className="logo">Ahmed.dev</h3>
+      <a href="#">
+        <h3 className="logo">Ahmed.dev</h3>
+      </a>
+
       <button
         className="model icon-menu flex"
         onClick={() => {
@@ -56,7 +59,11 @@ const Header = () => {
               onClick={(e) => e.stopPropagation()}
             >
               <div className="drawer-header">
-                <span className="logo">Ahmed.dev</span>
+                <a href="#">
+                  {" "}
+                  <span className="logo">Ahmed.dev</span>
+                </a>
+
                 <button
                   className="menu_close icon-clear"
                   onClick={() => setModel(false)}
