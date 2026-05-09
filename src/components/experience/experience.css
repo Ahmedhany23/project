@@ -44,6 +44,14 @@
   padding: var(--sp-lg) var(--sp-gutter) 0; /* Added top padding */
 }
 
+@media (max-width: 768px) {
+  .experience-card-shell {
+    position: relative;
+    height: auto;
+      top: 0px;
+  }
+}
+
 .experience-card {
   position: relative;
   width: min(100%, 1100px);
