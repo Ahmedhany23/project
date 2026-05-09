@@ -5,9 +5,8 @@ const About = () => {
   return (
     <div id="about" className="AboutPage">
       <div className="AboutText">
-        <h1 className="AboutTextHeading">
-          <LettersPullUp text="Get to know me!" />
-        </h1>
+        <span className="section-label">-- GET TO KNOW ME</span>
+        <h2 className="section-title">Who I Am</h2>
 
         <p>
           Hi, my name is <b>Ahmed Hany</b>, and I am from Giza, Egypt. I am a{" "}

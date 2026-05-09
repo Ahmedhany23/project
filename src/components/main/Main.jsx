@@ -102,8 +102,8 @@ const Main = () => {
   return (
     <main id="project" className="flex">
       <div className="projects-header">
-        <span className="section-label">My Work</span>
-        <h2>Featured Projects</h2>
+        <span className="section-label">-- MY WORK</span>
+        <h2 className="section-title">Featured Projects</h2>
       </div>
 
       <section className="flex left-section">

@@ -1,9 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap");
 
-/* ============================================
-   DESIGN SYSTEM — High-Contrast Tech
-   From DESIGN.md
-   ============================================ */
+@import "tailwindcss";
+
+
 :root {
   /* === Surfaces === */
   --surface: #131313;
@@ -182,6 +181,7 @@
 html {
   font-size: 16px;
   scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* Header height (64px) + extra space */
   scrollbar-width: thin;
   scrollbar-color: var(--accent) var(--bg-alt);
 }
@@ -274,11 +274,23 @@ button:active:not(:disabled) {
 /* Label-md style — used for section eyebrows */
 .section-label {
   font-family: var(--font-display);
-  font-size: var(--text-lm-size);
-  font-weight: var(--text-lm-weight);
-  letter-spacing: var(--text-lm-ls);
+  font-size: var(--text-ll-size);
+  font-weight: var(--text-ll-weight);
+  letter-spacing: var(--text-ll-ls);
   text-transform: uppercase;
   color: var(--accent);
+  display: block;
+  margin-bottom: var(--sp-sm);
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: var(--text-hm-size);
+  font-weight: var(--text-hm-weight);
+  line-height: var(--text-hm-lh);
+  letter-spacing: var(--text-hm-ls);
+  color: var(--text-primary);
+  margin-bottom: var(--sp-md);
 }
 
 /* ============================================
@@ -378,4 +390,8 @@ button:active:not(:disabled) {
   width: 65%;
   height: 65%;
   object-fit: contain;
+}
+
+.flex-col {
+  flex-direction: column;
 }

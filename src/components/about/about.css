@@ -10,28 +10,7 @@
   margin-inline: auto;
 }
 
-/* Eyebrow label */
-.AboutPage::before {
-  content: '— About Me';
-  display: block;
-  font-family: var(--font-display);
-  font-size: var(--text-lm-size);
-  font-weight: var(--text-lm-weight);
-  letter-spacing: var(--text-lm-ls);
-  text-transform: uppercase;
-  color: var(--accent);
-}
 
-/* Heading — headline-md */
-.AboutTextHeading {
-  font-family: var(--font-display);
-  font-size: var(--text-hm-size);
-  font-weight: var(--text-hm-weight);
-  line-height: var(--text-hm-lh);
-  letter-spacing: var(--text-hm-ls);
-  color: var(--text-primary);
-  margin-bottom: var(--sp-md);
-}
 
 /* Paragraph — body-md */
 .AboutText {

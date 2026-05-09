@@ -39,8 +39,8 @@ const Skills = () => {
   return (
     <section id="skills" className="skills-section">
       <div className="skills-header">
-        <span className="section-label">Expertise</span>
-        <h2 className="skills-title">Technical Skills</h2>
+        <span className="section-label">-- EXPERTISE</span>
+        <h2 className="section-title">Technical Skills</h2>
       </div>
 
       <div className="skills-grid">

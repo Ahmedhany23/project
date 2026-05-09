@@ -58,10 +58,11 @@ const Contact = () => {
   return (
     <section id="contact" className="contact-us">
       <div className="contact-left">
-        <h1 className="title">
+        <span className="section-label">-- GET IN TOUCH</span>
+        <h2 className="section-title">
           <span className="icon-envelope"> </span>
           Contact Me
-        </h1>
+        </h2>
         <p className="sub-title">
           Have a project in mind or want to discuss the latest in tech? Feel
           free to reach out.

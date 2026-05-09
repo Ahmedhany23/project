@@ -34,14 +34,13 @@ const Hero = () => {
       </button>
 
       <div className="first_section">
-        {/* Greeting badge */}
-        <div className="greeting-tag">Available for work</div>
+        <div className="section-label">-- AVAILABLE FOR WORK</div>
 
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
-          className="title"
+          className="section-title"
         >
           <LettersPullUp text="Hi There, I'm Ahmed Hany" />
 
@@ -183,7 +182,7 @@ const Hero = () => {
             stiffness: 80,
             damping: 15,
           }}
-          src="/5X5.jpg"
+          src="/5X5.png"
           alt="Ahmed Hany"
           className="MyImage"
         />

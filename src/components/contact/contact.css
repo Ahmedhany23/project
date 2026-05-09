@@ -13,18 +13,6 @@ section.contact-us {
   flex: 1;
 }
 
-/* Eyebrow */
-.contact-left::before {
-  content: "— Get In Touch";
-  display: block;
-  font-family: var(--font-display);
-  font-size: var(--text-lm-size);
-  font-weight: var(--text-lm-weight);
-  letter-spacing: var(--text-lm-ls);
-  text-transform: uppercase;
-  color: var(--accent);
-  margin-bottom: var(--sp-sm);
-}
 
 /* ── Contact Details ── */
 .contact-details {
@@ -62,14 +50,7 @@ a.detail-item:hover {
 }
 
 /* Heading — headline-md */
-.contact-us .title {
-  font-family: var(--font-display);
-  font-size: var(--text-hm-size);
-  font-weight: var(--text-hm-weight);
-  line-height: var(--text-hm-lh);
-  letter-spacing: var(--text-hm-ls);
-  color: var(--text-primary);
-  margin-bottom: var(--sp-sm);
+.contact-us .section-title {
   display: flex;
   align-items: center;
   gap: var(--sp-sm);

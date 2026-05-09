@@ -26,11 +26,11 @@ const Testimonials = () => {
   return (
     <section id="testimonials" className="testimonials-section">
       <div className="testimonials-header">
-        <span className="section-label">Testimonials</span>
-        <h2 className="testimonials-title">What <i>Clients</i> Say</h2>
+        <span className="section-label">-- TESTIMONIALS</span>
+        <h2 className="section-title">What Clients Say</h2>
       </div>
 
-    {/*   <div className="testimonials-grid" >
+      <div className="testimonials-grid" >
         {testimonialsData.map((item, index) => (
           <motion.div
             key={index}
@@ -43,7 +43,7 @@ const Testimonials = () => {
             <div className="quote-icon">“</div>
             <p className="testimonial-content">{item.content}</p>
             <div className="testimonial-footer">
-              <img src={item.avatar} alt={item.name} className="testimonial-avatar" />
+             {/*  <img src={item.avatar} alt={item.name} className="testimonial-avatar" /> */}
               <div className="testimonial-info">
                 <h4 className="testimonial-name">{item.name}</h4>
                 <span className="testimonial-role">{item.role}</span>
@@ -51,7 +51,7 @@ const Testimonials = () => {
             </div>
           </motion.div>
         ))}
-      </div> */}
+      </div>
     </section>
   );
 };

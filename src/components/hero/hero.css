@@ -32,31 +32,21 @@ section.hero .first_section {
   z-index: 1;
 }
 
-/* Status badge */
-section.hero .greeting-tag {
+section.hero .section-label {
   display: inline-flex;
   align-items: center;
   gap: var(--sp-xs);
-  background: transparent;
-  border: 1px solid var(--outline-variant);
-  border-radius: var(--r-base);
-  padding: var(--sp-xs) var(--sp-sm);
-  font-family: var(--font-display);
-  font-size: var(--text-lm-size);  /* 12px */
-  font-weight: var(--text-lm-weight);
-  letter-spacing: var(--text-lm-ls);
-  text-transform: uppercase;
-  color: var(--accent);
-  margin-bottom: var(--sp-md);  /* 24px */
+  margin-bottom: var(--sp-md);
 }
 
-section.hero .greeting-tag::before {
+section.hero .section-label::before {
   content: '';
   width: 6px;
   height: 6px;
   border-radius: 50%;
   background: var(--accent);
   animation: blink 1.8s ease-in-out infinite;
+  margin-right: 8px;
 }
 
 @keyframes blink {
@@ -65,7 +55,7 @@ section.hero .greeting-tag::before {
 }
 
 /* Main heading — headline-lg */
-section.hero .title {
+section.hero .section-title {
   font-family: var(--font-display);
   font-size: var(--text-hl-size);   /* 48px clamped */
   font-weight: var(--text-hl-weight);

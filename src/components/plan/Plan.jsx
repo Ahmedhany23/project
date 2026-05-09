@@ -126,7 +126,7 @@ const Plan = () => {
     <section id="plan" className="plan-section">
       <div className="plan-header">
         <span className="section-label">-- TRANSPARENT PRICING</span>
-        <h2 className="plan-title">Choose Your <i>Plan</i></h2>
+        <h2 className="section-title">Choose Your Plan</h2>
         <p className="plan-subtitle">
           No hidden fees. Every plan is scoped to deliver real value — from a 
           simple landing page to a full front-end experience.

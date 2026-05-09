@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import "./App.css";
 import About from "./components/about/about";
 import Contact from "./components/contact/Contact";
@@ -9,8 +10,20 @@ import Main from "./components/main/Main";
 import Plan from "./components/plan/Plan";
 import Skills from "./components/skills/Skills";
 import Testimonials from "./components/testimonials/Testimonials";
+import Lenis from "lenis";
 
 function App() {
+  useEffect(() => {
+    const lenis = new Lenis();
+
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+  });
+
   return (
     <div className="app">
       {/* Header is position:fixed — lives outside the container */}
@@ -42,7 +55,7 @@ function App() {
 
         <div className="divider container" />
 
-        <section className="section-full">
+        <section className="section-full relative">
           <Experience />
         </section>
 
