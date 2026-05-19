@@ -95,7 +95,6 @@ section.contact-us label {
 /* DESIGN.md: "dark-gray fill slightly lighter than the background. Bottom border emphasized; when focused, transition to primary green." */
 section.contact-us #email,
 section.contact-us #message {
-  all: unset;
   display: block;
   width: 100%;
   padding: 10px var(--sp-sm);
